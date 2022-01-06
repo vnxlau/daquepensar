@@ -1,0 +1,67 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "name": "Joao",
+      "user_id": "1",
+      "active": "true",
+      "created_at": "2022-01-06T14:49:02.676Z",
+      "created_by": "1",
+      "modified_at": "2022-01-06T14:49:02.676Z",
+      "modified_by": "1"
+    },
+    {
+      "id": 2,
+      "name": "Maria",
+      "user_id": "2",
+      "active": "true",
+      "created_at": "2022-01-06T14:49:02.676Z",
+      "created_by": "1",
+      "modified_at": "2022-01-06T14:49:02.676Z",
+      "modified_by": "1"
+    },
+    {
+      "id": 3,
+      "name": "Pedro",
+      "user_id": "3",
+      "active": "true",
+      "created_at": "2022-01-06T14:49:02.676Z",
+      "created_by": "1",
+      "modified_at": "2022-01-06T14:49:02.676Z",
+      "modified_by": "1"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "email": "joao@mail.com",
+      "password": "12345",
+      "active": "true",
+      "created_at": "2022-01-06T14:49:02.676Z",
+      "created_by": "1",
+      "modified_at": "2022-01-06T14:49:02.676Z",
+      "modified_by": "1"
+    },
+    {
+      "id": 2,
+      "email": "maria@mail.com",
+      "password": "12345",
+      "active": "true",
+      "created_at": "2022-01-06T14:49:02.676Z",
+      "created_by": "1",
+      "modified_at": "2022-01-06T14:49:02.676Z",
+      "modified_by": "1"
+    },
+    {
+      "id": 3,
+      "email": "pedro@mail.com",
+      "password": "12345",
+      "active": "true",
+      "created_at": "2022-01-06T14:49:02.676Z",
+      "created_by": "1",
+      "modified_at": "2022-01-06T14:49:02.676Z",
+      "modified_by": "1"
+    }
+
+  ]
+}
