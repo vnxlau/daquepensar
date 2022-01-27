@@ -1,11 +1,12 @@
-﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace daquepensar.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("[controller]")]
-    public class WeatherForecastController : ControllerBase
+    public class StudentsController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
         {
@@ -14,19 +15,21 @@ namespace daquepensar.Controllers
 
         private readonly ILogger<WeatherForecastController> _logger;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public StudentsController(ILogger<WeatherForecastController> logger)
         {
             _logger = logger;
         }
 
         [HttpGet]
-        public IEnumerable<WeatherForecast> Get()
+        public IEnumerable<Student> Get()
         {
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            string fileName = "..\\..\\db.json";
+            string jsonString = System.IO.File.ReadAllText(fileName);
+            Console.WriteLine(jsonString);
+
+            return Enumerable.Range(1, 5).Select(index => new Student
             {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
+                Name = "Jack"
             })
             .ToArray();
         }

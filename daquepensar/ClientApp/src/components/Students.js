@@ -1,46 +1,41 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 export class Students extends Component {
-  static displayName = Students.name;
 
   constructor(props) {
     super(props);
-    this.state = { currentCount: 0 };
-    this.incrementCounter = this.incrementCounter.bind(this);
+    this.state = { students: []};
   }
-    useEffect(() => {
-        const getTasks = async () => {
-            const tasksFromServer = await fetchTasks()
-            setTasks(tasksFromServer)
-        }
 
-        getTasks()
-    }, [])
+  componentDidMount() {
+    fetch('http://localhost:3000/students')
+      .then(response => response.json())
+      .then(data => {
+        this.setState({ students: data });
+        console.log(data);
+      })
+  }
 
-  const fetchTasks = async () => {
-    const res = await fetch('http://localhost:5000/tasks')
-    const data = await res.json()
+  handleListClick = param => (e) => {
+    console.log(param);
 
-    return data
-}
-
-  incrementCounter() {
-    this.setState({
-      currentCount: this.state.currentCount + 1
-    });
   }
 
   render() {
     return (
       <div>
-        <h1>Counter</h1>
+        <h1>Students</h1>
 
-        <p>This is a simple example of a React component.</p>
+        {this.state.students.map((student, index) => (
+          <p key={index} onClick={this.handleListClick(student)}>
+            <Link to={{ pathname:'/Student', state: student}}> {student.name} </Link>
+          </p>
+        ))}
 
-        <p aria-live="polite">Current count: <strong>{this.state.currentCount}</strong></p>
-
-        <button className="btn btn-primary" onClick={this.incrementCounter}>Increment</button>
       </div>
     );
   }
 }
+
+
