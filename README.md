@@ -14,3 +14,11 @@ ReactJS
 use json-server to run localRest server based on a db.json file
 
 https://www.npmjs.com/package/json-server
+
+just install json-server:
+
+`json-server --watch db.json`
+
+the set the file to be used as a database as follows:
+
+`json-server --watch db.json`
