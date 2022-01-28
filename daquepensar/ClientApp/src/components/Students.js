@@ -9,7 +9,7 @@ export class Students extends Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:3000/students')
+    fetch('http://localhost:3000/student')
       .then(response => response.json())
       .then(data => {
         this.setState({ students: data });
