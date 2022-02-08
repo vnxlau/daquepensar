@@ -3,6 +3,9 @@
     {
       "id": 1,
       "name": "Joao 2",
+      "gender": "m",
+      "birthday": "10-12-2010",
+      "address_id": 1,
       "user_id": "1",
       "active": "false",
       "created_at": "2022-01-06T14:49:02.676Z",
@@ -13,6 +16,9 @@
     {
       "id": 2,
       "name": "Maria",
+      "gender": "m",
+      "birthday": "10-12-2010",
+      "address_id": 1,
       "user_id": "2",
       "active": "true",
       "created_at": "2022-01-06T14:49:02.676Z",
@@ -23,6 +29,9 @@
     {
       "id": 3,
       "name": "Pedro",
+      "gender": "m",
+      "birthday": "10-12-2010",
+      "address_id": 1,
       "user_id": "3",
       "active": "true",
       "created_at": "2022-01-06T14:49:02.676Z",
@@ -55,6 +64,8 @@
   ],
   "class": [
     {
+      "start_time": "14:00:00",
+      "end_time": "18:00:00",
       "active": "true",
       "created_at": "2022-01-06T14:49:02.676Z",
       "created_by": "1",
@@ -67,18 +78,44 @@
     {
       "teacher_id": 1,
       "student_id": 1,
+      "start_time": "15:00:00",
+      "end_time": "16:00:00",
+      "date": "2022-02-06",
       "active": "true",
       "created_at": "2022-01-06T14:49:02.676Z",
       "created_by": "1",
       "modified_at": "2022-01-06T14:49:02.676Z",
       "modified_by": "1",
       "id": 1
+    },
+    {
+      "teacher_id": 1,
+      "student_id": 2,
+      "start_time": "15:00:00",
+      "end_time": "16:00:00",
+      "date": "2022-02-06",
+      "active": "true",
+      "created_at": "2022-01-06T14:49:02.676Z",
+      "created_by": "1",
+      "modified_at": "2022-01-06T14:49:02.676Z",
+      "modified_by": "1",
+      "id": 2
     }
   ],
   "classStudent": [
     {
       "class_id": 1,
       "student_id": 1,
+      "active": "true",
+      "created_at": "2022-01-06T14:49:02.676Z",
+      "created_by": "1",
+      "modified_at": "2022-01-06T14:49:02.676Z",
+      "modified_by": "1",
+      "id": 1
+    },
+    {
+      "class_id": 1,
+      "student_id": 2,
       "active": "true",
       "created_at": "2022-01-06T14:49:02.676Z",
       "created_by": "1",
@@ -149,6 +186,52 @@
       "created_by": "1",
       "modified_at": "2022-01-06T14:49:02.676Z",
       "modified_by": "1"
+    }
+  ],
+  "address": [
+    {
+      "street": "rua do vale grande",
+      "street2": "lote 1",
+      "city": "Leiria",
+      "postal_code": "2415-608",
+      "active": "true",
+      "created_at": "2022-01-06T14:49:02.676Z",
+      "created_by": "1",
+      "modified_at": "2022-01-06T14:49:02.676Z",
+      "modified_by": "1",
+      "id": 1
+    }
+  ],
+  "plan": [
+    {
+      "name": "Todos os dias",
+      "active": "true",
+      "created_at": "2022-01-06T14:49:02.676Z",
+      "created_by": "1",
+      "modified_at": "2022-01-06T14:49:02.676Z",
+      "modified_by": "1",
+      "id": 1
+    },
+    {
+      "name": "3 dias",
+      "active": "true",
+      "created_at": "2022-01-06T14:49:02.676Z",
+      "created_by": "1",
+      "modified_at": "2022-01-06T14:49:02.676Z",
+      "modified_by": "1",
+      "id": 2
+    }
+  ],
+  "studentPlan": [
+    {
+      "student_id": 1,
+      "plan_id": 1,
+      "active": "true",
+      "created_at": "2022-01-06T14:49:02.676Z",
+      "created_by": "1",
+      "modified_at": "2022-01-06T14:49:02.676Z",
+      "modified_by": "1",
+      "id": 1
     }
   ]
 }

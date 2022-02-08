@@ -5,7 +5,7 @@ export class Students extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { students: []};
+    this.state = { students: [] };
   }
 
   componentDidMount() {
@@ -13,26 +13,33 @@ export class Students extends Component {
       .then(response => response.json())
       .then(data => {
         this.setState({ students: data });
-        console.log(data);
       })
   }
 
-  handleListClick = param => (e) => {
-    console.log(param);
-
+  async populateStudentsData() {
+    const response = await fetch('students', {
+    });
+    console.log(response);
+    const data = await response.json();
+    this.setState({ studentsServer: data, loading: false });
   }
 
   render() {
     return (
-      <div>
+      <div className='row'>
         <h1>Students</h1>
-
-        {this.state.students.map((student, index) => (
-          <p key={index} onClick={this.handleListClick(student)}>
-            <Link to={{ pathname:'/Student', state: student}}> {student.name} </Link>
-          </p>
-        ))}
-
+        <div className='col-6'>
+          {this.state.students.map((student, index) => (
+            <p key={index} >
+              <Link to={{ pathname: '/Student', state: student }}> {student.name} </Link>
+              <Link to={{ pathname: '/Student', state: student }}> Editar </Link>
+              <Link to={{ pathname: '/Student', state: student }}> Apagar </Link>
+            </p>
+          ))}
+        </div>
+        <div className='col-6'>
+          Adicionar
+        </div>
       </div>
     );
   }
