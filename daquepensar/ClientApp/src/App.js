@@ -20,7 +20,7 @@ export default class App extends Component {
         <Route exact path='/' component={Home} />
         <Route path='/students' component={Students} />
         <Route path='/student' component={Student} />
-        <AuthorizeRoute path='/fetch-data' component={FetchData} />
+        <Route path='/fetch-data' component={FetchData} />
         <Route path={ApplicationPaths.ApiAuthorizationPrefix} component={ApiAuthorizationRoutes} />
       </Layout>
     );

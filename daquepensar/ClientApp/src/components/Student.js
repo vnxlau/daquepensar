@@ -17,6 +17,15 @@ export class Student extends Component {
   }
 
   componentDidMount() {
+
+    //get student address
+    fetch('https://localhost:44471/Students')
+      .then(response => response.json())
+      .then(data => {
+        this.setState({ address: data });
+        console.log("students", this.state.address);
+      })
+
     //get student address
     fetch('http://localhost:3000/address/' + this.state.student.address_id)
       .then(response => response.json())

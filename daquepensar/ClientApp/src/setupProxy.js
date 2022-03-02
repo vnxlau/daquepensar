@@ -12,6 +12,8 @@ const context =  [
   "/connect",
   "/ApplyDatabaseMigrations",
   "/_framework",
+  "/StudentManagement",
+  "/Student",
   "/Students"
 
 ];
