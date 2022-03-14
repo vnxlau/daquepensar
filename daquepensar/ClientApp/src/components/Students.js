@@ -9,11 +9,18 @@ export class Students extends Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:3000/student')
-      .then(response => response.json())
-      .then(data => {
-        this.setState({ students: data });
-      })
+    // fetch('http://localhost:3000/student')
+    //   .then(response => response.json())
+    //   .then(data => {
+    //     this.setState({ students: data });
+    //   })
+    //get student address
+    fetch('https://localhost:44471/Students')
+    .then(response => response.json())
+    .then(data => {
+      this.setState({ students: data });
+      console.log("students", data);
+    })
   }
 
   async populateStudentsData() {
@@ -30,10 +37,10 @@ export class Students extends Component {
         <h1>Students</h1>
         <div className='col-6'>
           {this.state.students.map((student, index) => (
-            <p key={index} >
-              <Link to={{ pathname: '/Student', state: student }}> {student.name} </Link>
-              <Link to={{ pathname: '/Student', state: student }}> Editar </Link>
-              <Link to={{ pathname: '/Student', state: student }}> Apagar </Link>
+            <p key={index}>
+              <Link to={{ pathname: '/Student', state: student }}>{student.name}</Link> - 
+              <Link to={{ pathname: '/Student', state: student }}>Editar</Link> - 
+              <Link to={{ pathname: '/Student', state: student }}>Apagar</Link>
             </p>
           ))}
         </div>

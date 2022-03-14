@@ -29,7 +29,11 @@ namespace daquepensar.Controllers
             return Enumerable.Range(1, 5).Select(index => new Student
             {
                 Name = "Jack",
-                Address = new Address(){Id=1, Active= true, Street="rua do crl", Stree2="ap 1. n2", City="Leiria", PostalCode="1234-123" }
+                Address = new Address(){Id=index, Active= true, Street="rua do crl", Street2="ap 1. n2", City="Leiria", PostalCode="1234-123" },
+                Active= true,
+                Id= index,
+                Plan = new Plan() { Id=index, Name = "Tempo inteiro" },
+                IndividualClasses = new List<IndividualClass>(){ new IndividualClass() { StartTime = DateTime.Now, EndTime = DateTime.Now, Teacher = new Teacher () {Id = index, Name = "prf "+index }} }
             })
             .ToArray();
         }

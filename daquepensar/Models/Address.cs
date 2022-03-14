@@ -6,7 +6,7 @@ namespace daquepensar
 
         public string? Street { get; set; }
         
-        public string? Stree2 { get; set; }
+        public string? Street2 { get; set; }
         
         public string? City { get; set; }
         

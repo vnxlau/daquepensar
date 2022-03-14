@@ -14,9 +14,9 @@ namespace daquepensar
 
         public Boolean Active { get; set; }  
 
-        public List<IndividualClass> IndividualClasses { get;}
+        public List<IndividualClass> IndividualClasses { get; set;}
 
-        public List<GroupClass> GroupClasses  { get; } 
+        public List<GroupClass> GroupClasses  { get; set;} 
 
         public Plan? Plan { get; set; }
 

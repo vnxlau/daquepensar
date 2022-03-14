@@ -4,9 +4,15 @@ namespace daquepensar
     {
         public int Id { get; set; } 
 
-        public DateTime? StartTime { get; set; }
+        public string date {get { return StartTime.ToShortDateString();}}
 
-        public DateTime? EndTime { get; set; }
+        public string starttimehour { get {return StartTime.ToLongTimeString();}}
+
+        public string endtimehour { get {return EndTime.ToLongTimeString();}}
+
+        public DateTime StartTime { get; set; }
+
+        public DateTime EndTime { get; set; }
 
         public Student? Student { get; set; }
 
